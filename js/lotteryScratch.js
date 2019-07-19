@@ -22,14 +22,19 @@ var lotteryScratch = (function () {
   _lotteryScratch.prototype = {
     constructor: 'lotteryScratch',
     /** 
-      * _checkSupportLotteryScratch : function 
-      * Element에는 id가 필수로 존재하여야 한다. 
-      * id가 없으면 진행하지않음. 
+      * _checkSupportUserAgent : function 
+      * user가 접속한 기기가 pc인지 mobile인지 판단해준다.
+      * pc면 false, mobile이면 true
     */
     _checkSupportUserAgent: function () {
       var filter = 'win16|win32|win64|mac|macintel';
       if (navigator.platform) return filter.indexOf(navigator.platform.toLowerCase()) < 0 ? true : false;
     },
+    /** 
+      * _checkSupportLotteryScratch : function 
+      * Element에는 id가 필수로 존재하여야 한다. 
+      * id가 없으면 진행하지않음. 
+    */
     _checkSupportLotteryScratch: function () {
       return (function (element) {
         return element.getAttribute('id') ? true : false;

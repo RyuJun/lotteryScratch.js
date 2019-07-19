@@ -9,21 +9,28 @@
   <script src="./js/lotteryScratch.js"></script>
   <script>
     window.addEventListener('load', function () {
+
+      // example 1
       var lotteryScratchGo1 = new lotteryScratch(
         document.querySelector('#lotteryScratch1'), 492, 259, 20,
         './images/img_cont02.jpg',
       );
+
+      lotteryScratchGo1
+        .LotteryScratchInit()
+        .LotteryScratchCallback(function () {
+          document.querySelector('#lotteryScratch1').style.backgroundImage = "url('./images/20190719_112814.png')";
+        }).LotteryScratch();
+
+
+
+      // example 2
       var lotteryScratchGo2 = new lotteryScratch(
         document.querySelector('#lotteryScratch2'), 492, 259, 25,
         './images/img_cont02.jpg',
       );
-      lotteryScratchGo1.LotteryScratchInit();
+
       lotteryScratchGo2.LotteryScratchInit();
-
-      lotteryScratchGo1.LotteryScratchCallback(function () {
-        document.querySelector('#lotteryScratch1').style.backgroundImage = "url('./images/20190719_112814.png')";
-      }).LotteryScratch();
-
 
       document.querySelector('#lotteryScratch2').onclick = function () {
         lotteryScratchGo2.LotteryScratchReadyAlert('lotteryScratch2 start or reset 버튼을 클릭한 뒤 진행해주세요!');
@@ -35,6 +42,7 @@
             document.querySelector('#lotteryScratch2').style.backgroundImage = "url('./images/20190719_114105.png')";
           }).LotteryScratch();
       }
+
     });
   </script>
 </head>
