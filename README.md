@@ -2,6 +2,9 @@
 
 > lotteryScratch.js는 HTML5 canvas를 사용하여 제작되었다. 마치 복권을 긁는 듯한 이벤트를 처리해주는 자바스크립트 라이브러리 이며, 브라우저에서 각종 이벤트 페이지 제작에 사용될 수 있다.
 
+[Demo   : https://ryujun.github.io/demos/JavaScript/lotteryScratch/](https://ryujun.github.io/demos/JavaScript/lotteryScratch/)<br>
+[Github : https://github.com/RyuJun/lotteryScratch](https://github.com/RyuJun/lotteryScratch)
+
 ## 지원
 > chrome, firefox, while 등등의 모던브라우저 및 ie9 버전 이상에서 지원함
 
